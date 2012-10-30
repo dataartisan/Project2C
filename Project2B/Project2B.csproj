@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26E6D4CA-74F6-459D-94A1-4E89B8E6027A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project2B</RootNamespace>
+    <AssemblyName>Project2B</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Project2B.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <HintPath>D:\Work\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Armors\AbstractArmor.cs" />
+    <Compile Include="Armors\Armor.cs" />
+    <Compile Include="Events\MonsterEncounterEvent.cs" />
+    <Compile Include="Gui\Test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\CountDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Curreny\AbstractCurrency.cs" />
+    <Compile Include="Food\Beef.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Interfaces\IWeaponDamage.cs" />
+    <Compile Include="ItemWeightConfig\WeightConfig.cs" />
+    <Compile Include="Events\DeadEndDeath.cs" />
+    <Compile Include="Fixtures\DrawBridge.cs" />
+    <Compile Include="Gui\GameGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GameGui.Designer.cs">
+      <DependentUpon>GameGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IDeadEndDeath.cs" />
+    <Compile Include="Locations\ILocationEnchancedWrapper.cs" />
+    <Compile Include="Interfaces\ISwitch.cs" />
+    <Compile Include="Interfaces\ISwitchable.cs" />
+    <Compile Include="Interfaces\ISwitchOnOff.cs" />
+    <Compile Include="Interfaces\IWeight.cs" />
+    <Compile Include="Fixtures\LightSource.cs" />
+    <Compile Include="Interfaces\IMoveEventExit.cs" />
+    <Compile Include="Events\MoveEventExit.cs" />
+    <Compile Include="Actors\PlayerConfig.cs" />
+    <Compile Include="Events\DeathEvent.cs" />
+    <Compile Include="Interfaces\IDeathEvent.cs" />
+    <Compile Include="Interfaces\IMoveEventEnter.cs" />
+    <Compile Include="Interfaces\ISurvivedTrap.cs" />
+    <Compile Include="Events\MoveEventEnter.cs" />
+    <Compile Include="Actors\PlayerObserver.cs" />
+    <Compile Include="Events\DropEvent.cs" />
+    <Compile Include="Interfaces\IEatEVent.cs" />
+    <Compile Include="Locations\LocationObserverandObservable.cs" />
+    <Compile Include="Events\PickUpEvent.cs" />
+    <Compile Include="Locations\MonsterEvent.cs" />
+    <Compile Include="MonsterSpawner.cs" />
+    <Compile Include="Monster\AbstractMonster.cs" />
+    <Compile Include="Monster\DeadlyMonster.cs" />
+    <Compile Include="Monster\IMonster.cs" />
+    <Compile Include="TripRecorderandPrinter\SuperTripRecorder.cs" />
+    <Compile Include="Actors\HealthMeter.cs" />
+    <Compile Include="UnitTests\GlobalVariableTest.cs" />
+    <Compile Include="Weapon\Knife.cs" />
+    <Compile Include="Events\EatEvent.cs" />
+    <Compile Include="Tool\FlashLight.cs" />
+    <Compile Include="Interfaces\IActive.cs" />
+    <Compile Include="Interfaces\IEdible.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
+    <Compile Include="Curreny\Coin.cs" />
+    <Compile Include="Tool\AbstractTool.cs" />
+    <Compile Include="Weapon\AbstractWeapon.cs" />
+    <Compile Include="Actors\Actor.cs" />
+    <Compile Include="Algorithms\Algorithm1.cs" />
+    <Compile Include="Food\AbstractFood.cs" />
+    <Compile Include="Interfaces\IConfigurable.cs" />
+    <Compile Include="Interfaces\IFixture.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="ExitGame.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Flags\Control.cs" />
+    <Compile Include="ExitGameCommand.cs" />
+    <Compile Include="GameRun\GameRun.cs" />
+    <Compile Include="Interfaces\IExploreAlgorithm.cs" />
+    <Compile Include="Interfaces\IExit.cs" />
+    <Compile Include="Locations\ILocationDecorator.cs" />
+    <Compile Include="Interfaces\IDropEvent.cs" />
+    <Compile Include="Interfaces\IPickUpEvent.cs" />
+    <Compile Include="Interfaces\IRecord.cs" />
+    <Compile Include="Interfaces\ITerrian.cs" />
+    <Compile Include="Tool\Key.cs" />
+    <Compile Include="Locations\LocationLevelTwoWrap.cs" />
+    <Compile Include="Actors\PlayerObservable.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\SurvivedTrap.cs" />
+    <Compile Include="GameTerrain\Terrian1.cs" />
+    <Compile Include="TripRecorderandPrinter\TerrianPrinter.cs" />
+    <Compile Include="GameTerrain\ToFromXmlTerrain.cs" />
+    <Compile Include="Fixtures\Trap.cs" />
+    <Compile Include="UnitTests\BeefTest.cs" />
+    <Compile Include="UnitTests\CoinTest.cs" />
+    <Compile Include="UnitTests\ControlTest.cs" />
+    <Compile Include="UnitTests\DrawBridgeTest.cs" />
+    <Compile Include="UnitTests\FlashLightTest.cs" />
+    <Compile Include="UnitTests\HealthSourceTest.cs" />
+    <Compile Include="UnitTests\HeathMeterTest.cs" />
+    <Compile Include="UnitTests\InfoTest.cs" />
+    <Compile Include="UnitTests\KeyTest.cs" />
+    <Compile Include="UnitTests\KnifeTest.cs" />
+    <Compile Include="UnitTests\MarkerTest.cs" />
+    <Compile Include="UnitTests\PickupEventTest.cs" />
+    <Compile Include="UnitTests\PlayerConfigTest.cs" />
+    <Compile Include="UnitTests\SurvivalTrapTest.cs" />
+    <Compile Include="UnitTests\TrapTest.cs" />
+    <Compile Include="UnitTests\WrapperTypeTest.cs" />
+    <Compile Include="UnitTests\ContainerLocationTest.cs" />
+    <Compile Include="UnitTests\FlagTests.cs" />
+    <Compile Include="UnitTests\SingletonTest.cs" />
+    <Compile Include="UnitTests\LocationTests.cs" />
+    <Compile Include="UnitTests\PlayerClassTest.cs" />
+    <Compile Include="Locations\UpdateRequest.cs" />
+    <Compile Include="TripRecorderandPrinter\TripRecorder.cs" />
+    <Compile Include="Flags\Flag.cs" />
+    <Compile Include="Interfaces\ICarriable.cs" />
+    <Compile Include="Locations\Location.cs" />
+    <Compile Include="Locations\ContainerLocation.cs" />
+    <Compile Include="Locations\ExitLocations.cs" />
+    <Compile Include="Interfaces\ILocations.cs" />
+    <Compile Include="Interfaces\IActor.cs" />
+    <Compile Include="Locations\LocationObservable.cs" />
+    <Compile Include="Flags\Marker.cs" />
+    <Compile Include="Actors\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Misc\terrain.txt" />
+    <Content Include="Misc\PlayerConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Misc\Descriptions.txt" />
+    <Content Include="Misc\ItemWeightConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\GameGui.resx">
+      <DependentUpon>GameGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

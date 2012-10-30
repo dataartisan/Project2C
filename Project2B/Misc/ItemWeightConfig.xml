@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Weight>
+  <ConfigWeight>
+    <Value>3</Value>
+  </ConfigWeight>
+  <DefaultWeight>
+    <Value>1</Value>
+  </DefaultWeight>
+</Weight>

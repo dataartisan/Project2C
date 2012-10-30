@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Player>
+  <EnergyLevel>
+    <Value>100</Value>
+  </EnergyLevel>
+  <MaxCarryItems>
+    <Value>15</Value>
+  </MaxCarryItems>
+  <Lives>
+    <Value>5</Value>
+  </Lives>
+  <MoveEnergyDecrease>
+    <Value>1</Value>
+  </MoveEnergyDecrease>
+</Player>
